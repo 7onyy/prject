@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                    android:layout_width="400dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="10dp" android:layout_marginTop="10dp" android:layout_marginEnd="10dp"
+                    android:background="@drawable/layout_bg" android:id="@+id/cardView">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:text="@string/departue"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/departue"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="16dp" android:layout_marginStart="10dp" android:textSize="19sp"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/departueTime"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="56dp" android:layout_marginStart="10dp" android:textSize="35sp"
+                            android:gravity="center_vertical"/>
+                    <TextView
+                            android:text="@string/time"
+                            android:layout_width="130dp"
+                            android:layout_height="30dp" android:id="@+id/time"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp"
+                            app:layout_constraintEnd_toStartOf="@+id/arrival"
+                            app:layout_constraintStart_toEndOf="@+id/departue"/>
+                    <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="50dp" android:id="@+id/timeValue"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical"
+                            app:layout_constraintStart_toEndOf="@+id/departueTime"
+                            app:layout_constraintEnd_toStartOf="@+id/arrivalTime"/>
+                    <TextView
+                            android:text="@string/arrival"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/arrival"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/arrivalTime"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="400dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="10dp" android:layout_marginEnd="10dp"
+                    android:background="@drawable/layout_bg"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/cardView2">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:text="@string/departue"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/departue2"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="16dp" android:layout_marginStart="10dp" android:textSize="19sp"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/departueTime2"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="56dp" android:layout_marginStart="10dp" android:textSize="35sp"
+                            android:gravity="center_vertical"/>
+                    <TextView
+                            android:text="@string/time"
+                            android:layout_width="130dp"
+                            android:layout_height="30dp" android:id="@+id/time2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp"
+                            app:layout_constraintEnd_toStartOf="@+id/arrival2"
+                            app:layout_constraintStart_toEndOf="@+id/departue2"/>
+                    <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="50dp" android:id="@+id/timeValue2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical"
+                            app:layout_constraintStart_toEndOf="@+id/departueTime2"
+                            app:layout_constraintEnd_toStartOf="@+id/arrivalTime2"/>
+                    <TextView
+                            android:text="@string/arrival"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/arrival2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/arrivalTime2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="400dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="10dp" android:layout_marginEnd="10dp"
+                    android:background="@drawable/layout_bg" android:id="@+id/cardView3"
+                    android:layout_marginTop="10dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:text="@string/departue"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/departue3"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="16dp" android:layout_marginStart="10dp" android:textSize="19sp"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/departueTime3"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="56dp" android:layout_marginStart="10dp" android:textSize="35sp"
+                            android:gravity="center_vertical"/>
+                    <TextView
+                            android:text="@string/time"
+                            android:layout_width="130dp"
+                            android:layout_height="30dp" android:id="@+id/time3"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp"
+                            app:layout_constraintEnd_toStartOf="@+id/arrival3"
+                            app:layout_constraintStart_toEndOf="@+id/departue3"/>
+                    <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="50dp" android:id="@+id/timeValue3"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical"
+                            app:layout_constraintStart_toEndOf="@+id/departueTime3"
+                            app:layout_constraintEnd_toStartOf="@+id/arrivalTime3"/>
+                    <TextView
+                            android:text="@string/arrival"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/arrival3"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/arrivalTime3"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="10dp" android:layout_marginTop="10dp" android:layout_marginEnd="10dp"
+                    android:background="@drawable/layout_bg" android:id="@+id/cardView4">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:text="@string/departue"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/departue4"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="16dp" android:layout_marginStart="10dp" android:textSize="19sp"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/departueTime4"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="56dp" android:layout_marginStart="10dp" android:textSize="35sp"
+                            android:gravity="center_vertical"/>
+                    <TextView
+                            android:text="@string/time"
+                            android:layout_width="130dp"
+                            android:layout_height="30dp" android:id="@+id/time4"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp"
+                            app:layout_constraintEnd_toStartOf="@+id/arrival4"
+                            app:layout_constraintStart_toEndOf="@+id/departue4"/>
+                    <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="50dp" android:id="@+id/timeValue4"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical"
+                            app:layout_constraintStart_toEndOf="@+id/departueTime4"
+                            app:layout_constraintEnd_toStartOf="@+id/arrivalTime4"/>
+                    <TextView
+                            android:text="@string/arrival"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/arrival4"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/arrivalTime4"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="10dp" android:layout_marginTop="10dp" android:layout_marginEnd="10dp"
+                    android:background="@drawable/layout_bg" android:id="@+id/cardView5">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:text="@string/departue"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/departue5"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="16dp" android:layout_marginStart="10dp" android:textSize="19sp"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/departueTime5"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="56dp" android:layout_marginStart="10dp" android:textSize="35sp"
+                            android:gravity="center_vertical"/>
+                    <TextView
+                            android:text="@string/time"
+                            android:layout_width="130dp"
+                            android:layout_height="30dp" android:id="@+id/time5"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp"
+                            app:layout_constraintEnd_toStartOf="@+id/arrival5"
+                            app:layout_constraintStart_toEndOf="@+id/departue5"/>
+                    <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="50dp" android:id="@+id/timeValue5"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical"
+                            app:layout_constraintStart_toEndOf="@+id/departueTime5"
+                            app:layout_constraintEnd_toStartOf="@+id/arrivalTime5"/>
+                    <TextView
+                            android:text="@string/arrival"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/arrival5"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/arrivalTime5"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="10dp" android:layout_marginTop="10dp" android:layout_marginEnd="10dp"
+                    android:background="@drawable/layout_bg" android:id="@+id/cardView6">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:text="@string/departue"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/departue6"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="16dp" android:layout_marginStart="10dp" android:textSize="19sp"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/departueTime6"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="56dp" android:layout_marginStart="10dp" android:textSize="35sp"
+                            android:gravity="center_vertical"/>
+                    <TextView
+                            android:text="@string/time"
+                            android:layout_width="130dp"
+                            android:layout_height="30dp" android:id="@+id/time6"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp"
+                            app:layout_constraintEnd_toStartOf="@+id/arrival6"
+                            app:layout_constraintStart_toEndOf="@+id/departue6"/>
+                    <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="50dp" android:id="@+id/timeValue6"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical"
+                            app:layout_constraintStart_toEndOf="@+id/departueTime6"
+                            app:layout_constraintEnd_toStartOf="@+id/arrivalTime6"/>
+                    <TextView
+                            android:text="@string/arrival"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/arrival6"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/arrivalTime6"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="10dp" android:layout_marginTop="10dp" android:layout_marginEnd="10dp"
+                    android:background="@drawable/layout_bg" android:id="@+id/cardView7">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:text="@string/departue"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/departue7"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="16dp" android:layout_marginStart="10dp" android:textSize="19sp"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/departueTime7"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="56dp" android:layout_marginStart="10dp" android:textSize="35sp"
+                            android:gravity="center_vertical"/>
+                    <TextView
+                            android:text="@string/time"
+                            android:layout_width="130dp"
+                            android:layout_height="30dp" android:id="@+id/time7"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp"
+                            app:layout_constraintEnd_toStartOf="@+id/arrival7"
+                            app:layout_constraintStart_toEndOf="@+id/departue7"/>
+                    <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="50dp" android:id="@+id/timeValue7"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical"
+                            app:layout_constraintStart_toEndOf="@+id/departueTime7"
+                            app:layout_constraintEnd_toStartOf="@+id/arrivalTime7"/>
+                    <TextView
+                            android:text="@string/arrival"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/arrival7"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/arrivalTime7"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="10dp" android:layout_marginTop="10dp" android:layout_marginEnd="10dp"
+                    android:background="@drawable/layout_bg" android:id="@+id/cardView8">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:text="@string/departue"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/departue8"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="16dp" android:layout_marginStart="10dp" android:textSize="19sp"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/departueTime8"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="56dp" android:layout_marginStart="10dp" android:textSize="35sp"
+                            android:gravity="center_vertical"/>
+                    <TextView
+                            android:text="@string/time"
+                            android:layout_width="130dp"
+                            android:layout_height="30dp" android:id="@+id/time8"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp"
+                            app:layout_constraintEnd_toStartOf="@+id/arrival8"
+                            app:layout_constraintStart_toEndOf="@+id/departue8"/>
+                    <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="50dp" android:id="@+id/timeValue8"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical"
+                            app:layout_constraintStart_toEndOf="@+id/departueTime8"
+                            app:layout_constraintEnd_toStartOf="@+id/arrivalTime8"/>
+                    <TextView
+                            android:text="@string/arrival"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp" android:id="@+id/arrival8"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="16dp" android:textSize="19sp" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" android:id="@+id/arrivalTime8"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="56dp" android:textSize="35sp"
+                            android:gravity="center_vertical" android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

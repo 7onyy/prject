@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name" translatable="false">MPK Lubartow</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="from">Skąd jedziesz?</string>
+    <string name="to">Dokąd jedziesz?</string>
+    <string name="check">Check</string>
+
+    <string-array name="stops">
+        <item>ul. Hutnicza</item>
+        <item>ul. Kolejowa / DW PKP</item>
+        <item>ul. Powstańców Warszawy</item>
+        <item>ul. Cicha / Spółdzielnia Mieszkaniowa</item>
+        <item>ul. 1 Maja / Topaz</item>
+        <item>ul. Piaskowa / ul. 1 Maja</item>
+        <item>ul. Łąkowa / ul. Piaskowa</item>
+        <item>ul. Łąkowa / Szpital</item>
+        <item>ul. Cicha / Policja</item>
+        <item>ul. Lubelska / przy skrzyżowaniu z ul. Mickiewicza</item>
+        <item>ul. Partyzancka / PEC</item>
+        <item>ul. Farna / Targ</item>
+        <item>ul. Szaniawskiego</item>
+        <item>Aleje Tysiąclecia</item>
+        <item>ul. Nowodworska</item>
+        <item>ul. Lipowa III</item>
+        <item>ul. Lipowa II</item>
+        <item>ul. Lipowa I</item>
+        <item>ul. Chopina / I LO</item>
+        <item>ul. K. Jadwigi / Al. Zwycięstwa</item>
+        <item>ul. Mieszka I / ul. Leśna</item>
+        <item>ul. Kopernika II</item>
+        <item>ul. Polesie / ul. Kawalerzystów</item>
+        <item>ul. Polesie / ul. Lotników</item>
+        <item>ul. Kosmonautów / SP 4</item>
+        <item>Lisów V / Kościół</item>
+    </string-array>
+    <string name="title_activity_list_of_bus">ListOfBus</string>
+    <string name="arrival">Przyjazd o:</string>
+    <string name="departue">Odjazd o:</string>
+    <string name="time">Długość trasy:</string>
+</resources>
