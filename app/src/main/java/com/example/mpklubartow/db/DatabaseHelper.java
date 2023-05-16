@@ -18,14 +18,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String createTableQueryFirst = "CREATE TABLE IF NOT EXISTS stops_f ("
                 + "id INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + "busStop TEXT, "
-                + "time1 TIME, "
-                + "time2 TIME, "
-                + "time3 TIME, "
-                + "time4 TIME, "
-                + "time5 TIME, "
-                + "time6 TIME, "
-                + "time7 TIME, "
-                + "time8 TIME)";
+                + "time1 TEXT, "
+                + "time2 TEXT, "
+                + "time3 TEXT, "
+                + "time4 TEXT, "
+                + "time5 TEXT, "
+                + "time6 TEXT, "
+                + "time7 TEXT, "
+                + "time8 TEXT)";
         db.execSQL(createTableQueryFirst);
 
         String insertDataQueryFirst = "INSERT INTO stops_f (busStop, time1, time2, time3, time4, time5, time6, time7, time8) "
@@ -61,14 +61,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String createTableQuerySecond = "CREATE TABLE IF NOT EXISTS stops_s ("
                 + "id INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + "busStop TEXT, "
-                + "time1 TIME, "
-                + "time2 TIME, "
-                + "time3 TIME, "
-                + "time4 TIME, "
-                + "time5 TIME, "
-                + "time6 TIME, "
-                + "time7 TIME, "
-                + "time8 TIME)";
+                + "time1 TEXT, "
+                + "time2 TEXT, "
+                + "time3 TEXT, "
+                + "time4 TEXT, "
+                + "time5 TEXT, "
+                + "time6 TEXT, "
+                + "time7 TEXT, "
+                + "time8 TEXT)";
         db.execSQL(createTableQuerySecond);
 
         String insertDataQuerySecond = "INSERT INTO stops_s (busStop, time1, time2, time3, time4, time5, time6, time7, time8) "
