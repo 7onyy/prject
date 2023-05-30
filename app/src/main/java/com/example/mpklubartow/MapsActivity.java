@@ -141,10 +141,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         spinnerFrom.setAdapter(adapterFrom);
         spinnerTo.setAdapter(adapterTo);
 
-        final String[] from = new String[1];
-        final String[] to = new String[1];
-        final int[] from_p = new int[1];
-        final int[] to_p = new int[1];
+        String[] from = new String[1];
+        String[] to = new String[1];
+        int[] from_p = new int[1];
+        int[] to_p = new int[1];
 
         spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
