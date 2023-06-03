@@ -78,10 +78,14 @@ public class ListOfBus extends AppCompatActivity {
         setContentView(R.layout.list_of_buses);
 
         Bundle extras = getIntent().getExtras();
-        String from = extras.getString("from");
-        String to = extras.getString("to");
-        int from_p = extras.getInt("from_p");
-        int to_p = extras.getInt("to_p");
+        //String from = extras.getString("from");
+        //String to = extras.getString("to");
+        //int from_p = extras.getInt("from_p");
+        //int to_p = extras.getInt("to_p");
+        String from = "ul. Hutnicza";
+        String to = "ul. Kolejowa / DW PKP";
+        int from_p = 1;
+        int to_p = 2;
 
         createViews();
 
@@ -98,10 +102,10 @@ public class ListOfBus extends AppCompatActivity {
         if (from_p<to_p){
             for (int i = 1; i <= 8; i++) {
                 //SQL zapytanie
-                String query1= "select time"+i+" from stops_f where id='"+from_p+"';";
-                String query2= "select time"+i+" from stops_f where id='"+to_p+"';";
-                String query3= "SELECT (strftime('%s', (select time"+i+" from stops_f where id='"+to_p+"')) " +
-                        "- strftime('%s', (select time"+i+" from stops_f where id="+from_p+")))/60 FROM stops_f;";
+                String query1= "select time"+i+" from stops_f where busStop='"+from+"';";
+                String query2= "select time"+i+" from stops_f where busStop='"+to+"';";
+                String query3= "select julianday('select time"+i+" from stops_f where busStop="+from+"') - " +
+                        "julianday('select time"+i+" from stops_f where busStop="+to+"')";
 
                 // Wykonujemy zapytanie do bazy danych
                 Cursor cursor1 = db.rawQuery(query1, null);
@@ -140,10 +144,9 @@ public class ListOfBus extends AppCompatActivity {
         }}else if(to_p<from_p){
             for (int i = 1; i <= 8; i++) {
                 //SQL zapytanie
-                String query1= "select time"+i+" from stops_s where id='"+from_p+"';";
-                String query2= "select time"+i+" from stops_s where id='"+to_p+"';";
-                String query3= "SELECT (strftime('%s', (select time"+i+" from stops_s where id='"+to_p+"')) " +
-                        "- strftime('%s', (select time"+i+" from stops_s where id="+from_p+")))/60 FROM stops_s;";
+                String query1= "select time"+i+" from stops_s where busStop='"+from+"';";
+                String query2= "select time"+i+" from stops_s where busStop='"+to+"';";
+                String query3= "";
 
                 // Wykonujemy zapytanie do bazy danych
                 Cursor cursor1 = db.rawQuery(query1, null);
@@ -187,27 +190,27 @@ public class ListOfBus extends AppCompatActivity {
         fromTime.setText(txtFrom.get(0));
         toTime.setText(txtTo.get(0));
         time.setText(txtTime.get(0));
-        fromTime2.setText(txtFrom.get(1));
-        toTime2.setText(txtTo.get(1));
-        time2.setText(txtTime.get(1));
-        fromTime3.setText(txtFrom.get(2));
-        toTime3.setText(txtTo.get(2));
-        time3.setText(txtTime.get(2));
-        fromTime4.setText(txtFrom.get(3));
-        toTime4.setText(txtTo.get(3));
-        time4.setText(txtTime.get(3));
-        fromTime5.setText(txtFrom.get(4));
-        toTime5.setText(txtTo.get(4));
-        time5.setText(txtTime.get(4));
-        fromTime6.setText(txtFrom.get(5));
-        toTime6.setText(txtTo.get(5));
-        time6.setText(txtTime.get(5));
-        fromTime7.setText(txtFrom.get(6));
-        toTime7.setText(txtTo.get(6));
-        time7.setText(txtTime.get(6));
-        fromTime8.setText(txtFrom.get(7));
-        toTime8.setText(txtTo.get(7));
-        time8.setText(txtTime.get(7));
+        //fromTime2.setText(txtFrom.get(1));
+        //toTime2.setText(txtTo.get(1));
+        //time2.setText(txtTime.get(1));
+        //fromTime3.setText(txtFrom.get(2));
+        //toTime3.setText(txtTo.get(2));
+        //time3.setText(txtTime.get(2));
+        //fromTime4.setText(txtFrom.get(3));
+        //toTime4.setText(txtTo.get(3));
+        //time4.setText(txtTime.get(3));
+        //fromTime5.setText(txtFrom.get(4));
+        //toTime5.setText(txtTo.get(4));
+        //time5.setText(txtTime.get(4));
+        //fromTime6.setText(txtFrom.get(5));
+        //toTime6.setText(txtTo.get(5));
+        //time6.setText(txtTime.get(5));
+        //fromTime7.setText(txtFrom.get(6));
+        //toTime7.setText(txtTo.get(6));
+        //time7.setText(txtTime.get(6));
+        //fromTime8.setText(txtFrom.get(7));
+        //toTime8.setText(txtTo.get(7));
+        //time8.setText(txtTime.get(7));
 
 
 

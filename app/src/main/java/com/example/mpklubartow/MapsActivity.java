@@ -183,10 +183,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), ListOfBus.class);
-                i.putExtra("from", from[0]);
-                i.putExtra("to", to[0]);
-                i.putExtra("from_p", from_p[0]);
-                i.putExtra("to_p", to_p[0]);
+                //i.putExtra("from", from[0]);
+                //i.putExtra("to", to[0]);
+                //i.putExtra("from_p", from_p[0]);
+                //i.putExtra("to_p", to_p[0]);
                 startActivity(i);
             }
         });
