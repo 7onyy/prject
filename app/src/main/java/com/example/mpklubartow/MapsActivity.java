@@ -163,7 +163,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 to = parent.getItemAtPosition(position).toString();
-                to_p = position;
+                to_p = parent.getSelectedItemPosition();
             }
 
             @Override

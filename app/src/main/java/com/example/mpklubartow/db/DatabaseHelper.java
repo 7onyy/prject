@@ -18,14 +18,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String createTableQueryFirst = "CREATE TABLE IF NOT EXISTS stops_f ("
                 + "id INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + "busStop TEXT, "
-                + "time1 TEXT, "
-                + "time2 TEXT, "
-                + "time3 TEXT, "
-                + "time4 TEXT, "
-                + "time5 TEXT, "
-                + "time6 TEXT, "
-                + "time7 TEXT, "
-                + "time8 TEXT)";
+                + "time1 DATETIME, "
+                + "time2 DATETIME, "
+                + "time3 DATETIME, "
+                + "time4 DATETIME, "
+                + "time5 DATETIME, "
+                + "time6 DATETIME, "
+                + "time7 DATETIME, "
+                + "time8 DATETIME)";
         db.execSQL(createTableQueryFirst);
 
         String insertDataQueryFirst = "INSERT INTO stops_f (busStop, time1, time2, time3, time4, time5, time6, time7, time8) "

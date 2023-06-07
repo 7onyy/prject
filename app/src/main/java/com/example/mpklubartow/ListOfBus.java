@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.mpklubartow.db.DatabaseHelper;
 
@@ -77,16 +76,10 @@ public class ListOfBus extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_of_buses);
 
-        Bundle extras = getIntent().getExtras();
-        //String from = extras.getString("from");
-        //String to = extras.getString("to");
-        //int from_p = extras.getInt("from_p");
-        //int to_p = extras.getInt("to_p");
-
         String from = getIntent().getStringExtra("from");
         String to = getIntent().getStringExtra("to");
-        int from_p = getIntent().getIntExtra("from_p", 1);
-        int to_p = getIntent().getIntExtra("to_p", 2);
+        int from_p = getIntent().getIntExtra("from_p", 0);
+        int to_p = getIntent().getIntExtra("to_p", 0);
 
 //        String from = "ul. Hutnicza";
 //        String to = "ul. Nowodworska";
@@ -95,14 +88,10 @@ public class ListOfBus extends AppCompatActivity {
 
         createViews();
 
-        time.setText(from);
-        time2.setText(from_p);
-        time3.setText(to);
-        time4.setText(to_p);
-
-
-        //listOfBus=findViewById(R.id.recycleView);
-        //listOfBus.setLayoutManager(new LinearLayoutManager(ListOfBus.this));
+//        time.setText(from);
+//        time2.setText(""+from_p);
+//        time3.setText(to);
+//        time4.setText(""+to_p);
 
         // Tworzymy obiekt klasy DatabaseHelper
         DatabaseHelper dbHelper = new DatabaseHelper(this);
@@ -111,127 +100,108 @@ public class ListOfBus extends AppCompatActivity {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
 
-//        if (from_p<to_p){
-//            for (int i = 1; i <= 8; i++) {
-//                //SQL zapytanie
-//                String query1= "select time"+i+" from stops_f where busStop='"+from+"';";
-//                String query2= "select time"+i+" from stops_f where busStop='"+to+"';";
-//                String query3= "select (select time"+i+" from stops_f where busStop='"+to+"') - " +
-//                        "(select time"+i+" from stops_f where busStop='"+from+"');";
-//
-//                // Wykonujemy zapytanie do bazy danych
-//                Cursor cursor1 = db.rawQuery(query1, null);
-//                Cursor cursor2 = db.rawQuery(query2, null);
+        if (from_p<to_p){
+            for (int i = 1; i <= 8; i++) {
+                //SQL zapytanie
+                String query1= "select time"+i+" from stops_f where busStop='"+from+"';";
+                String query2= "select time"+i+" from stops_f where busStop='"+to+"';";
+                String query3= "";
+
+                // Wykonujemy zapytanie do bazy danych
+                Cursor cursor1 = db.rawQuery(query1, null);
+                Cursor cursor2 = db.rawQuery(query2, null);
+                Cursor cursor3 = db.rawQuery(query3, null);
+
+                // Pobieramy wartość z kolumny do listy
+                if (cursor1.moveToFirst()) {
+                    txtFrom.add(cursor1.getString(0));
+                }
+
+                if (cursor2.moveToFirst()) {
+                    txtTo.add(cursor2.getString(0));
+                }
+
+//                String from_q = cursor1.getString(0);
+//                String to_q = cursor2.getString(0);
+//                String query3 = "select julianday("+to_q+") - julianday("+from_q+") from stops_f;";
 //                Cursor cursor3 = db.rawQuery(query3, null);
-//
-//                // Pobieramy wartość z kolumny do listy
-//                if (cursor1.moveToFirst()) {
-//                    txtFrom.add(cursor1.getString(0));
-//                }
-//
-//                if (cursor2.moveToFirst()) {
-//                    txtTo.add(cursor2.getString(0));
-//                }
-//
-//                if (cursor3.moveToFirst()) {
-//                    txtTime.add(cursor3.getString(0));
-//                }
-//
-//                // Uwolnij zasoby kursorów
-//                cursor1.close();
-//                cursor2.close();
-//                cursor3.close();
-//
-//                /*String sql = "select time"+i+" from STOPS where busStop='"+from+"';";
-//                txtFrom = String.valueOf(statement.execute(sql));
-//                fromTime.setText(txtFrom);
-//
-//                String sql2 = "select time"+i+" from STOPS where busStop='"+to+"';";
-//                txtTo = String.valueOf(statement.execute(sql2));
-//                toTime.setText(txtTo);
-//
-//                String sql3 = "select DATEDIFF( MINUTE , (select time"+i+" from STOPS where busStop='"+from+"'), (select time"+i+" from STOPS where busStop='"+to+"'))";
-//                txtTime = String.valueOf(statement.execute(sql3));
-//                time.setText(txtTime);*/
-//        }}else if(to_p<from_p){
-//            for (int i = 1; i <= 8; i++) {
-//                //SQL zapytanie
-//                String query1= "select time"+i+" from stops_s where busStop='"+from+"';";
-//                String query2= "select time"+i+" from stops_s where busStop='"+to+"';";
-//                String query3= "";
-//
-//                // Wykonujemy zapytanie do bazy danych
-//                Cursor cursor1 = db.rawQuery(query1, null);
-//                Cursor cursor2 = db.rawQuery(query2, null);
-//                Cursor cursor3 = db.rawQuery(query3, null);
-//
-//                // Pobieramy wartość z kolumny
-//                if (cursor1.moveToFirst()) {
-//                    txtFrom.add(cursor1.getString(0));
-//                }
-//
-//                if (cursor2.moveToFirst()) {
-//                    txtTo.add(cursor2.getString(0));
-//                }
-//
-//                if (cursor3.moveToFirst()) {
-//                    txtTime.add(cursor3.getString(0));
-//                }
-//
-//                // Uwolnij zasoby kursorów
-//                cursor1.close();
-//                cursor2.close();
-//                cursor3.close();
-//
-//                /*String sql = "select time"+i+" from STOPS_2 where busStop='"+from+"';";
-//                txtFrom = String.valueOf(statement.execute(sql));
-//                fromTime.setText(txtFrom);
-//
-//                String sql2 = "select time"+i+" from STOPS_2 where busStop='"+to+"';";
-//                txtTo = String.valueOf(statement.execute(sql2));
-//                toTime.setText(txtTo);
-//
-//                String sql3 = "select DATEDIFF( MINUTE , (select time"+i+" from STOPS_2 where busStop='"+from+"'), (select time"+i+" from STOPS_2 where busStop='"+to+"'))";
-//                txtTime = String.valueOf(statement.execute(sql3));
-//                time.setText(txtTime);*/
-//            }
-//        }
-//
-//        fromTime.setText(txtFrom.get(0));
-//        toTime.setText(txtTo.get(0));
-//        time.setText(txtTime.get(0));
-//        fromTime2.setText(txtFrom.get(1));
-//        toTime2.setText(txtTo.get(1));
-//        time2.setText(txtTime.get(1));
-//        fromTime3.setText(txtFrom.get(2));
-//        toTime3.setText(txtTo.get(2));
-//        time3.setText(txtTime.get(2));
-//        fromTime4.setText(txtFrom.get(3));
-//        toTime4.setText(txtTo.get(3));
-//        time4.setText(txtTime.get(3));
-//        fromTime5.setText(txtFrom.get(4));
-//        toTime5.setText(txtTo.get(4));
-//        time5.setText(txtTime.get(4));
-//        fromTime6.setText(txtFrom.get(5));
-//        toTime6.setText(txtTo.get(5));
-//        time6.setText(txtTime.get(5));
-//        fromTime7.setText(txtFrom.get(6));
-//        toTime7.setText(txtTo.get(6));
-//        time7.setText(txtTime.get(6));
-//        fromTime8.setText(txtFrom.get(7));
-//        toTime8.setText(txtTo.get(7));
-//        time8.setText(txtTime.get(7));
+
+                if (cursor3.moveToFirst()) {
+                    txtTime.add(cursor3.getString(0));
+                }
+
+                // Uwolnij zasoby kursorów
+                cursor1.close();
+                cursor2.close();
+                cursor3.close();
+
+        }}else if(to_p<from_p){
+            for (int i = 1; i <= 8; i++) {
+                //SQL zapytanie
+                String query1= "select time"+i+" from stops_s where busStop='"+from+"';";
+                String query2= "select time"+i+" from stops_s where busStop='"+to+"';";
+                String query3= "";
+
+                // Wykonujemy zapytanie do bazy danych
+                Cursor cursor1 = db.rawQuery(query1, null);
+                Cursor cursor2 = db.rawQuery(query2, null);
+                Cursor cursor3 = db.rawQuery(query3, null);
+
+                // Pobieramy wartość z kolumny
+                if (cursor1.moveToFirst()) {
+                    txtFrom.add(cursor1.getString(0));
+                }
+
+                if (cursor2.moveToFirst()) {
+                    txtTo.add(cursor2.getString(0));
+                }
+
+                if (cursor3.moveToFirst()) {
+                    txtTime.add(cursor3.getString(0));
+                }
+
+                // Uwolnij zasoby kursorów
+                cursor1.close();
+                cursor2.close();
+                cursor3.close();
+            }
+        }
+
+        setters();
 
         // Zamykamy bazę danych
         db.close();
 
-
-        //connection.close();
-        //adapter = new RecyclerAdapter(txtFrom, txtTime, txtTo, ListOfBus.this);
-        //listOfBus.setAdapter(adapter);
     }
 
     public void dateModifier(String data1, String data2){
         
+    }
+
+    public void setters(){
+        fromTime.setText(txtFrom.get(0));
+        toTime.setText(txtTo.get(0));
+        time.setText(txtTime.get(0));
+        fromTime2.setText(txtFrom.get(1));
+        toTime2.setText(txtTo.get(1));
+        time2.setText(txtTime.get(1));
+        fromTime3.setText(txtFrom.get(2));
+        toTime3.setText(txtTo.get(2));
+        time3.setText(txtTime.get(2));
+        fromTime4.setText(txtFrom.get(3));
+        toTime4.setText(txtTo.get(3));
+        time4.setText(txtTime.get(3));
+        fromTime5.setText(txtFrom.get(4));
+        toTime5.setText(txtTo.get(4));
+        time5.setText(txtTime.get(4));
+        fromTime6.setText(txtFrom.get(5));
+        toTime6.setText(txtTo.get(5));
+        time6.setText(txtTime.get(5));
+        fromTime7.setText(txtFrom.get(6));
+        toTime7.setText(txtTo.get(6));
+        time7.setText(txtTime.get(6));
+        fromTime8.setText(txtFrom.get(7));
+        toTime8.setText(txtTo.get(7));
+        time8.setText(txtTime.get(7));
     }
 }
