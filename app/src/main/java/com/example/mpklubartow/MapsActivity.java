@@ -118,6 +118,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .icon(BitmapDescriptorFactory.fromBitmap(bluebuss))));
     }
 
+    String from;
+    String to;
+    int from_p;
+    int to_p;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -141,16 +146,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         spinnerFrom.setAdapter(adapterFrom);
         spinnerTo.setAdapter(adapterTo);
 
-        String[] from = new String[1];
-        String[] to = new String[1];
-        int[] from_p = new int[1];
-        int[] to_p = new int[1];
-
         spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                from[0] = parent.getItemAtPosition(position).toString();
-                from_p[0] = parent.getSelectedItemPosition();
+                from = parent.getItemAtPosition(position).toString();
+                from_p = parent.getSelectedItemPosition();
             }
 
             @Override
@@ -162,8 +162,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         spinnerTo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                to[0] = parent.getItemAtPosition(position).toString();
-                to_p[0] = parent.getSelectedItemPosition();
+                to = parent.getItemAtPosition(position).toString();
+                to_p = position;
             }
 
             @Override
@@ -172,21 +172,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-//        String from= spinnerFrom.getSelectedItem().toString();
-//        String to= spinnerTo.getSelectedItem().toString();
-//        int from_p= spinnerFrom.getSelectedItemPosition();
-//        int to_p= spinnerTo.getSelectedItemPosition();
-
-
         ImageButton checkButton=(ImageButton) findViewById(R.id.check);
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), ListOfBus.class);
-                //i.putExtra("from", from[0]);
-                //i.putExtra("to", to[0]);
-                //i.putExtra("from_p", from_p[0]);
-                //i.putExtra("to_p", to_p[0]);
+                i.putExtra("from", from);
+                i.putExtra("to", to);
+                i.putExtra("from_p", from_p);
+                i.putExtra("to_p", to_p);
                 startActivity(i);
             }
         });
@@ -198,22 +192,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         create();
 
-        spinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(, 17));
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
         mMap.setMinZoomPreference(14);
         LatLng lubartow = new LatLng(51.460277162720395, 22.608118359493712);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(lubartow));
-
-
     }
 }
