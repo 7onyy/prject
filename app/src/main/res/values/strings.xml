@@ -36,5 +36,6 @@
     <string name="title_activity_list_of_bus">ListOfBus</string>
     <string name="arrival">Przyjazd o:</string>
     <string name="departue">Odjazd o:</string>
-    <string name="time">Długość trasy:</string>
+    <string name="time">Czas jazdy:</string>
+    <string name="splashName">MPK Lubartów</string>
 </resources>

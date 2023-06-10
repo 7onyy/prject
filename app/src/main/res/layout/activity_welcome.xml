@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical" android:layout_width="fill_parent"
+              android:layout_height="fill_parent" android:id="@+id/splashLayout" android:background="#2196F3">
+
+    <ImageView android:id="@+id/splashIcon"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/icon"
+               android:layout_gravity="center"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/splashName" android:id="@+id/splashName" android:layout_gravity="center"
+              android:textSize="50sp" android:textColor="#000000"
+              android:textAlignment="center" android:typeface="serif"
+              android:textStyle="bold" android:fontFamily="casual"
+              android:shadowColor="#050F40"
+              android:shadowDx="12"
+              android:shadowDy="12"
+              android:shadowRadius="8"/>
+<!--    <ImageView android:id="@+id/splashName"-->
+<!--               android:layout_width="wrap_content"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:src="@drawable/bluebussstop"-->
+<!--               android:layout_gravity="center" android:layout_marginTop="50dp"/>-->
+
+</LinearLayout>
