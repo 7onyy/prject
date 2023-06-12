@@ -36,9 +36,9 @@ public class ListOfBus extends AppCompatActivity {
     TextView fromTime8;
     TextView toTime8;
     TextView time8;
-    private ArrayList<String> txtFrom=new ArrayList<>();
-    private ArrayList<String> txtTo=new ArrayList<>();
-    private ArrayList<String> txtTime=new ArrayList<>();
+    private final ArrayList<String> txtFrom=new ArrayList<>();
+    private final ArrayList<String> txtTo=new ArrayList<>();
+    private final ArrayList<String> txtTime=new ArrayList<>();
 
     public void createViews(){
         fromTime=findViewById(R.id.departueTime);
@@ -78,17 +78,7 @@ public class ListOfBus extends AppCompatActivity {
         int from_p = getIntent().getIntExtra("from_p", 0);
         int to_p = getIntent().getIntExtra("to_p", 0);
 
-//        String from = "ul. Kopernika II";
-//        String to = "ul. Polesie / ul. Lotników";
-//        int from_p = 2;
-//        int to_p = 4;
-
         createViews();
-
-//        time.setText(from);
-//        time2.setText(""+from_p);
-//        time3.setText(to);
-//        time4.setText(""+to_p);
 
         // Tworzymy obiekt klasy DatabaseHelper
         DatabaseHelper dbHelper = new DatabaseHelper(this);
@@ -102,12 +92,10 @@ public class ListOfBus extends AppCompatActivity {
                 //SQL zapytanie
                 String query1 = "select time"+i+" from stops_f where busStop='"+from+"';";
                 String query2 = "select time"+i+" from stops_f where busStop='"+to+"';";
-                //String query3 = "select time1 from stops_f";
 
                 // Wykonujemy zapytanie do bazy danych
                 Cursor cursor1 = db.rawQuery(query1, null);
                 Cursor cursor2 = db.rawQuery(query2, null);
-                //Cursor cursor3 = db.rawQuery(query3, null);
 
 
 
@@ -139,13 +127,11 @@ public class ListOfBus extends AppCompatActivity {
                 //SQL zapytanie
                 String query4 = "select time"+i+" from stops_s where busStop='"+from+"';";
                 String query5 = "select time"+i+" from stops_s where busStop='"+to+"';";
-                //String query6 = "select time1 from stops_s";
 
 
                 // Wykonujemy zapytanie do bazy danych
                 Cursor cursor4 = db.rawQuery(query4, null);
                 Cursor cursor5 = db.rawQuery(query5, null);
-                //Cursor cursor6 = db.rawQuery(query6, null);
 
                 // Pobieramy wartość z kolumny
                 if (cursor4.moveToFirst()) {
