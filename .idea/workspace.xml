@@ -11,9 +11,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3befa45-1b7d-4389-9ac2-1450c7719129" name="Changes" comment="final">
+    <list default="true" id="f3befa45-1b7d-4389-9ac2-1450c7719129" name="Changes" comment="Adding welcome activity view.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mpklubartow/ListOfBus.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mpklubartow/ListOfBus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mpklubartow/MapsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mpklubartow/MapsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mpklubartow/db/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mpklubartow/db/DatabaseHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_maps.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_maps.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +283,7 @@
       <workItem from="1686700772428" duration="69000" />
       <workItem from="1686748957050" duration="2232000" />
       <workItem from="1686787792807" duration="174000" />
-      <workItem from="1686831937606" duration="361000" />
+      <workItem from="1686831937606" duration="1164000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1684259955949</created>
@@ -343,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686582050885</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Adding welcome activity view.">
+      <created>1686832531331</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1686832531331</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +394,8 @@
     <MESSAGE value="07 06 2023" />
     <MESSAGE value="first end" />
     <MESSAGE value="final" />
-    <option name="LAST_COMMIT_MESSAGE" value="final" />
+    <MESSAGE value="Adding welcome activity view." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding welcome activity view." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

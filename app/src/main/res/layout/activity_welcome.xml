@@ -18,10 +18,5 @@
               android:shadowDx="12"
               android:shadowDy="12"
               android:shadowRadius="8"/>
-<!--    <ImageView android:id="@+id/splashName"-->
-<!--               android:layout_width="wrap_content"-->
-<!--               android:layout_height="wrap_content"-->
-<!--               android:src="@drawable/bluebussstop"-->
-<!--               android:layout_gravity="center" android:layout_marginTop="50dp"/>-->
 
 </LinearLayout>
