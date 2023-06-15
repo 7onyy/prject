@@ -115,7 +115,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Objects.requireNonNull(mMap.addMarker(new MarkerOptions().position(lisow)
                 .icon(BitmapDescriptorFactory.fromBitmap(bluebuss))));
     }
-
     String from;
     String to;
     int from_p;
@@ -150,11 +149,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 from = parent.getItemAtPosition(position).toString();
                 from_p = parent.getSelectedItemPosition();
             }
-
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                //nothing
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
 
         spinnerTo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -163,11 +159,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 to = parent.getItemAtPosition(position).toString();
                 to_p = parent.getSelectedItemPosition();
             }
-
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                //nothing
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
 
         ImageButton checkButton = findViewById(R.id.check);

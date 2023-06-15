@@ -15,6 +15,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
         String createTableQueryFirst = "CREATE TABLE IF NOT EXISTS stops_f ("
                 + "id INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + "busStop TEXT, "
