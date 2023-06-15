@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">MPK Lubartow</string>
     <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="from">Skąd jedziesz?</string>
     <string name="to">Dokąd jedziesz?</string>
     <string name="check">Check</string>
 
@@ -37,5 +38,4 @@
     <string name="departue">Odjazd o:</string>
     <string name="time">Czas jazdy:</string>
     <string name="splashName">MPK Lubartów</string>
-    <string name="from">Skąd jedziesz?</string>
 </resources>

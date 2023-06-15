@@ -23,11 +23,11 @@
                      android:background="@color/white">
             <Spinner
                     android:layout_width="match_parent" android:id="@+id/from"
-                    android:spinnerMode="dropdown" android:contentDescription="@string/"
+                    android:spinnerMode="dropdown" android:contentDescription="@string/from"
                     android:layout_height="match_parent" android:layout_marginStart="50dp"
-                    android:text="@string/"/>
+                    android:text="@string/from"/>
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                       android:src="@drawable/busstopblue_foreground" android:contentDescription="@string/"
+                       android:src="@drawable/busstopblue_foreground" android:contentDescription="@string/from"
                        android:layout_marginStart="-30dp"/>
         </FrameLayout>
 
@@ -38,10 +38,10 @@
                      android:background="@color/white">
             <Spinner
                     android:layout_width="match_parent" android:id="@+id/to"
-                    android:spinnerMode="dropdown" android:contentDescription="@string/"
+                    android:spinnerMode="dropdown" android:contentDescription="@string/to"
                     android:layout_height="match_parent" android:layout_marginStart="50dp"/>
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                       android:src="@drawable/busstopgreen_foreground" android:contentDescription="@string/"
+                       android:src="@drawable/busstopgreen_foreground" android:contentDescription="@string/to"
                        android:layout_marginStart="-30dp"/>
         </FrameLayout>
 
