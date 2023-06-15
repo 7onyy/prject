@@ -1,6 +1,5 @@
 package com.example.mpklubartow;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -23,7 +22,6 @@ import java.util.Objects;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private ActivityMapsBinding binding;
     Spinner spinnerFrom, spinnerTo;
     ArrayAdapter adapterFrom, adapterTo;
     private Bitmap getBitmap(int drawableRes) {
@@ -126,7 +124,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMapsBinding.inflate(getLayoutInflater());
+        com.example.mpklubartow.databinding.ActivityMapsBinding binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -165,17 +163,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        ImageButton checkButton=(ImageButton) findViewById(R.id.check);
-        checkButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), ListOfBus.class);
-                i.putExtra("from", from);
-                i.putExtra("to", to);
-                i.putExtra("from_p", from_p);
-                i.putExtra("to_p", to_p);
-                startActivity(i);
-            }
+        ImageButton checkButton = findViewById(R.id.check);
+        checkButton.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(), ListOfBus.class);
+            i.putExtra("from", from);
+            i.putExtra("to", to);
+            i.putExtra("from_p", from_p);
+            i.putExtra("to_p", to_p);
+            startActivity(i);
         });
     }
 
