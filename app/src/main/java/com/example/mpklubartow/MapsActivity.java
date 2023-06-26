@@ -1,5 +1,6 @@
 package com.example.mpklubartow;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -25,7 +26,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     Spinner spinnerFrom, spinnerTo;
     ArrayAdapter adapterFrom, adapterTo;
     private Bitmap getBitmap(int drawableRes) {
-        Drawable drawable = getResources().getDrawable(drawableRes);
+        @SuppressLint("UseCompatLoadingForDrawables") Drawable drawable = getResources().getDrawable(drawableRes);
         Canvas canvas = new Canvas();
         Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
         canvas.setBitmap(bitmap);
